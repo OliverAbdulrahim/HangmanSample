@@ -3,6 +3,7 @@ package hangman;
 import java.util.Arrays;
 import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  * The {@code Hangman} class contains the logic for a game of "Hangman." Game
@@ -77,7 +78,10 @@ public final class Hangman {
     private String correctGuesses;
 
     /**
-     * Stores the amount of character guesses that are left in this game.
+     * Stores the amount of character guesses that are left in this game. This
+     * value is concurrent with the correct image in the {@link #images} for 
+     * this instance and may be used as an index value when retrieving values 
+     * from the array for display purposes.
      */
     private int guessesLeft;
 
@@ -91,6 +95,7 @@ public final class Hangman {
      * ({@link #MEDIUM_DIFFICULTY}).
      */
     public Hangman() {
+        // TODO - Image reading, read and categorize words from a file
         resetGame(MEDIUM_DIFFICULTY);
     }
 
@@ -101,7 +106,7 @@ public final class Hangman {
      * @param difficulty The difficulty setting to use for this game.
      */
     public void resetGame(int difficulty) {
-        // TODO
+        // TODO - Difficulty settings, game variable reset
     }
 
 // Getters and setters (yay, encapsulation)
@@ -228,7 +233,7 @@ public final class Hangman {
      */
     public boolean makeGuess(String guess) {
         String g = Word.sanitizeString(guess);
-        // TODO
+        // TODO - Add logic for making guesses as delineated above.
         return false;
     }
     
@@ -241,7 +246,14 @@ public final class Hangman {
      *        based on its index occurrence in the current word.
      */
     private void insertCorrectGuess(String guess) {
-        // TODO
+        // TODO - Insert correct guesses into the correctGuesses String to 
+        // fulfill the contract given by this method's Javadoc
+    }
+    
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Hello, World!");
+        frame.setSize(300, 200);
+        frame.setVisible(true);
     }
     
 }

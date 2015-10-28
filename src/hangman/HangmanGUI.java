@@ -60,8 +60,8 @@ public final class HangmanGUI
      * Displays a {@code JOptionPane} confirmation dialog using the given
      * arguments.
      *
-     * @param message The message to display on the gameOperationsPanel.
-     * @param title The title of the gameOperationsPanel.
+     * @param message The message to display on the pane.
+     * @param title The title of the pane.
      * @return The outcome of the user input.
      */
     private static int showConfirmPane(String message, String title) {
@@ -73,8 +73,8 @@ public final class HangmanGUI
      * Displays a {@code JOptionPane} information window using the given
      * arguments.
      *
-     * @param message The message to display on the gameOperationsPanel.
-     * @param title The title of the gameOperationsPanel.
+     * @param message The message to display on the pane.
+     * @param title The title of the pane.
      */
     private static void showMessagePane(String message, String title) {
         JOptionPane.showMessageDialog(null, message, title,
@@ -85,8 +85,8 @@ public final class HangmanGUI
      * Displays a {@code JOptionPane} information window using the given
      * arguments.
      *
-     * @param message The message to display on the gameOperationsPanel.
-     * @param title The title of the gameOperationsPanel.
+     * @param message The message to display on the pane.
+     * @param title The title of the pane.
      */
     private static void showErrorPane(String message, String title) {
         JOptionPane.showMessageDialog(null, message, title,
@@ -337,7 +337,8 @@ public final class HangmanGUI
             }
         }
         
-        /* Layout for gameOperationsPanel could look something like the 
+        /* Hint:
+         * Layout for gameOperationsPanel could look something like the 
          * following:
          *        ╭─────────────────────╮
          *        │┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈│
@@ -352,6 +353,9 @@ public final class HangmanGUI
          *     - solid line     panel edges
          *     - ┈              padding
          *     - ■              component
+         * 
+         * I would use a BorderLayout, but you can use a GridBagLayout if you
+         * want more control over the result.
          */
         
         // TODO - Add your component setup code here.
@@ -454,7 +458,8 @@ public final class HangmanGUI
      * @param guess The character to attempt to guess.
      */
     private void makeMove(String guess) {
-        // TODO
+        // TODO - Add logic that delegates the given move to this instance's
+        // Hangman game object
     }
 
     /**
@@ -473,14 +478,16 @@ public final class HangmanGUI
      * reflect the state of the game.
      */
     private void updateCurrentLabel() {
-        // TODO
+        // TODO - Add code that updates the JLabel that displays the word that 
+        // is being guessed for
     }
 
     /**
      * Updates the image to reflect the current state of the game.
      */
     private void updateImages() {
-        // TODO
+        // TODO - Add code that updates the images based on the amount of 
+        // incorrect guesses left.
     }
 
     /**
@@ -488,7 +495,8 @@ public final class HangmanGUI
      * characters, the amount of guesses left, and the win rate.
      */
     private void updateStatistics() {
-        // TODO
+        // TODO - Add code that updates the components contained within the 
+        // gameOperationsPanel
     }
 
     /**
@@ -497,7 +505,7 @@ public final class HangmanGUI
      * @see #gameEnded() Called by this method if the game has ended.
      */
     private void checkGameState() {
-        // TODO
+        // TODO - Add code that checks if the game has been won or lost
     }
 
     /**
@@ -505,7 +513,8 @@ public final class HangmanGUI
      * blocked until the game is reset.
      */
     private void gameEnded() {
-        // TODO
+        // TODO - Add code that disables everything in the GUI at the end of the
+        // game
     }
     
 }
