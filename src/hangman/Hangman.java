@@ -3,7 +3,6 @@ package hangman;
 import java.util.Arrays;
 import java.util.List;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 
 /**
  * The {@code Hangman} class contains the logic for a game of "Hangman." Game
@@ -248,12 +247,6 @@ public final class Hangman {
     private void insertCorrectGuess(String guess) {
         // TODO - Insert correct guesses into the correctGuesses String to 
         // fulfill the contract given by this method's Javadoc
-    }
-    
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Hello, World!");
-        frame.setSize(300, 200);
-        frame.setVisible(true);
     }
     
 }

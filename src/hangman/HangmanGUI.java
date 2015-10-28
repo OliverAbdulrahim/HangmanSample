@@ -341,17 +341,17 @@ public final class HangmanGUI
          * Layout for gameOperationsPanel could look something like the 
          * following:
          *        ╭─────────────────────╮
-         *        │┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈│
-         *        │┈┈ ■■■■■■■■■■■■■■■ ┈┈│
-         *        │┈┈ ■■■■■■■■■■■■■■■ ┈┈│
-         *        │┈┈ ■■■■■■■■■■■■■■■ ┈┈│
-         *        │┈┈ ■■■■■■■■■■■■■■■ ┈┈│
-         *        │┈┈ ■■■■■■■■■■■■■■■ ┈┈│
-         *        │┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈│
+         *        │.....................│
+         *        │.. ■■■■■■■■■■■■■■■ ..│
+         *        │.. ■■■■■■■■■■■■■■■ ..│
+         *        │.. ■■■■■■■■■■■■■■■ ..│
+         *        │.. ■■■■■■■■■■■■■■■ ..│
+         *        │.. ■■■■■■■■■■■■■■■ ..│
+         *        │.....................│
          *        ╰─────────────────────╯
          *   Character/Item     Representation
          *     - solid line     panel edges
-         *     - ┈              padding
+         *     - ..              padding
          *     - ■              component
          * 
          * I would use a BorderLayout, but you can use a GridBagLayout if you
